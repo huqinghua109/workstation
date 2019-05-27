@@ -1,23 +1,37 @@
+import os
 import pandas as pd
 import datetime as dtt
 import numpy as np
 import matplotlib.pyplot as plt
 import copy
 
-CORNPRICE_EXCEL = "E:\\Desktop\\workstation\\database\\CornPice.xlsx"
-FUTURES_EXCEL = "E:\\Desktop\\workstation\\database\\FuturesData.xlsx"
-PIGPRICE_EXCEL = "E:\\Desktop\\workstation\\database\\PigData.xlsx"
-SALERATE_EXCEL = "E:\\Desktop\\workstation\\database\\CornSalerate.xlsx"
-NORTHPORT_EXCEL = "E:\\Desktop\\workstation\\database\\NorthPort.xlsx"
-SORTHPORT_EXCEL = "E:\\Desktop\\workstation\\database\\SorthPort.xlsx"
-DEEPPROCESSING_EXCEL = "E:\\Desktop\\workstation\\database\\DeepProcessOprationAndProfit.xlsx"
-FACTORY_EXCEL = "E:\\Desktop\\workstation\\database\\FactoryInventories.xlsx"
-ANALYSIS_EXCEL = "E:\\Desktop\\workstation\\Analysis.xlsx"
-IMPORTANDEXPORT_EXCEL = "E:\\Desktop\\workstation\\database\\ImportAndExport.xlsx"
-CFTC_EXCEL = "E:\\Desktop\\workstation\\database\\CFTCopi.xlsx"
-CBOTFUTURES_EXCEL = "E:\\Desktop\\workstation\\database\\CBOTFuturesData.xlsx"
+# CORNPRICE_EXCEL = "E:\\Desktop\\workstation\\database\\CornPice.xlsx"
+CORNPRICE_EXCEL = os.path.join(os.getcwd(), "database", "CornPice.xlsx")
+# FUTURES_EXCEL = "E:\\Desktop\\workstation\\database\\FuturesData.xlsx"
+FUTURES_EXCEL = os.path.join(os.getcwd(), "database", "FuturesData.xlsx")
+# PIGPRICE_EXCEL = "E:\\Desktop\\workstation\\database\\PigData.xlsx"
+PIGPRICE_EXCEL = os.path.join(os.getcwd(), "database", "PigData.xlsx")
+# SALERATE_EXCEL = "E:\\Desktop\\workstation\\database\\CornSalerate.xlsx"
+SALERATE_EXCEL = os.path.join(os.getcwd(), "database", "CornSalerate.xlsx")
+# NORTHPORT_EXCEL = "E:\\Desktop\\workstation\\database\\NorthPort.xlsx"
+NORTHPORT_EXCEL = os.path.join(os.getcwd(), "database", "NorthPort.xlsx")
+# SORTHPORT_EXCEL = "E:\\Desktop\\workstation\\database\\SorthPort.xlsx"
+SORTHPORT_EXCEL = os.path.join(os.getcwd(), "database", "SorthPort.xlsx")
+# DEEPPROCESSING_EXCEL = "E:\\Desktop\\workstation\\database\\DeepProcessOprationAndProfit.xlsx"
+DEEPPROCESSING_EXCEL = os.path.join(os.getcwd(), "database", "DeepProcessOprationAndProfit.xlsx")
+# FACTORY_EXCEL = "E:\\Desktop\\workstation\\database\\FactoryInventories.xlsx"
+FACTORY_EXCEL = os.path.join(os.getcwd(), "database", "FactoryInventories.xlsx")
+# ANALYSIS_EXCEL = "E:\\Desktop\\workstation\\Analysis.xlsx"
+ANALYSIS_EXCEL = os.path.join(os.getcwd(), "Analysis.xlsx")
+# IMPORTANDEXPORT_EXCEL = "E:\\Desktop\\workstation\\database\\ImportAndExport.xlsx"
+IMPORTANDEXPORT_EXCEL = os.path.join(os.getcwd(), "database", "ImportAndExport.xlsx")
+# CFTC_EXCEL = "E:\\Desktop\\workstation\\database\\CFTCopi.xlsx"
+CFTC_EXCEL = os.path.join(os.getcwd(), "database", "CFTCopi.xlsx")
+# CBOTFUTURES_EXCEL = "E:\\Desktop\\workstation\\database\\CBOTFuturesData.xlsx"
+CBOTFUTURES_EXCEL = os.path.join(os.getcwd(), "database", "CBOTFuturesData.xlsx")
 
-WEBDATA_EXCEL = "E:\\Desktop\\PyCode\\webdata.xlsx"
+# WEBDATA_EXCEL = "E:\\Desktop\\PyCode\\webdata.xlsx"
+WEBDATA_EXCEL = os.path.join(os.getcwd(), "webdata.xlsx")
 
 # df = pd.read_excel(excel_path)
 # print(df.shape)
