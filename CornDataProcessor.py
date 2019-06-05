@@ -408,10 +408,10 @@ if sport_df.iloc[-1,[2,5]].isnull().sum() > 0:
 	portclean_df = sport_df[:-1]
 else:
 	portclean_df = sport_df
-GDPort_df = portclean_df.iloc[:,[0,1,2,3,4,5,18,19,20]]
-GDPort_df.columns = ["gdnmgather", "gdnmout", "gdnmcarry", "gdjkgather", "gdjkout", "gdjkcarry", "importcorn", "importUSAsorghum", "importbarley"]
-GDPort_df["GDGather"] = portclean_df.iloc[:,[0,3]].apply(lambda x: x.sum(), axis=1)
-GDPort_df["GDOut"] = portclean_df.iloc[:,[1,4]].apply(lambda x: x.sum(), axis=1)
+GDPort_df = portclean_df.iloc[:,[0,1,2,3,4,5,12,13,15,16,18,19,20]]
+GDPort_df.columns = ["gdnmgather", "gdnmout", "gdnmcarry", "gdjkgather", "gdjkout", "gdjkcarry", "gatherSorghum", "outSorghum", "gatherBarley", "outBarley", "importcorn", "importUSAsorghum", "importbarley"]
+GDPort_df["GDGather"] = portclean_df.iloc[:,[0,3,12,15]].apply(lambda x: x.sum(), axis=1)
+GDPort_df["GDOut"] = portclean_df.iloc[:,[1,4,13,16]].apply(lambda x: x.sum(), axis=1)
 GDPort_df["GDCarryOutSum"] = portclean_df.iloc[:,[2,5]].apply(lambda x: x.sum(), axis=1)
 GDPort_df["weekchange"] = GDPort_df["GDCarryOutSum"] - GDPort_df["GDCarryOutSum"].shift(1)
 # import profit
@@ -426,9 +426,9 @@ GDPort_df["nsRatio"] = GDPort_df["GDCarryOutSum"]/GDPort_df["northCarryOutSum"]
 # print(GDPort_df)
 
 gatherN_year_df = data_year_process(northPort_df, columnsNum=13)
-gatherGD_year_df = data_year_process(GDPort_df, columnsNum=10)
+gatherGD_year_df = data_year_process(GDPort_df, columnsNum=14)
 outN_year_df = data_year_process(northPort_df, columnsNum=14)
-outGD_year_df = data_year_process(GDPort_df, columnsNum=11)
+outGD_year_df = data_year_process(GDPort_df, columnsNum=15)
 gatherBBW_year_df = data_year_process(sport_df, columnsNum=7)
 outBBW_year_df = data_year_process(sport_df, columnsNum=8)
 gatherZZ_year_df = data_year_process(sport_df, columnsNum=10)
