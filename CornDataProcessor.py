@@ -494,7 +494,7 @@ def price_year_process(df):
 	year_df["date"] = year_df.index
 	year_df["monday"] = year_df['date'].apply(lambda x: x.strftime("%m-%d"))
 
-	for year in range(minyear, maxyear+1):
+	for year in range(minyear, maxyear+2):
 		thisyear_df = df[(df.index>dtt.datetime(year-1,9,30))&(df.index<dtt.datetime(year,10,1))]
 		thisyear_df.columns = ["%s/%s"%(year-1, year), "date" , "monday"]
 		year_df = pd.merge(year_df, thisyear_df.iloc[:,[0,2]], how="left", on="monday")
